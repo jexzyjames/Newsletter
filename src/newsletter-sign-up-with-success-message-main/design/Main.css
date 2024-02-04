@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+ --Marine-blue: hsl(213, 96%, 18%);
+--Purplish-blue: hsl(243, 100%, 62%);
+--Pastel-blue: hsl(228, 100%, 84%);
+--Light-blue: hsl(206, 94%, 87%);
+--Strawberry-red: hsl(354, 84%, 57%);
+--Cool-gray: hsl(231, 11%, 63%);
+--Light-gray: hsl(229, 24%, 87%);
+--Magnolia: hsl(217, 100%, 97%);
+--Alabaster: hsl(231, 100%, 99%);
+--White: hsl(0, 0%, 100%);
+}
+
+.container{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background:var(--Marine-blue) ;
+}
+.form{
+    display: flex;
+    /* min-height: 100vh; */
+    margin: 100px auto;
+    justify-content: space-between;
+    /* padding: 1rem; */
+    /* height: auto; */
+    align-items: center;
+    background: var(--White);
+    border-radius: 10px;
+}
+.rightcontent{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    /* flex-basis: 50%; */
+    padding: 2rem;
+}
+.leftcontent{
+    display: flex;
+    position: relative;
+    /* width: 100%; */
+    /* height: auto; */
+    padding: 2rem;
+    flex-direction: column;
+    /* flex-basis: 50%; */
+}
+.image{
+    width: 100%;
+    /* float: right; */
+    height: auto;
+    /* flex-direction: column; */
+    display: flex;
+    justify-content: right;
+}
+.desktop{
+    width: 80%;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    color: var(--Cool-gray);
+}
+.tick{
+    width: 10px;
+    margin-right: 10px;
+}
+h2{
+    color: var(--Marine-blue);
+    margin-bottom: 10px;
+}
+p{
+    color: var(--Purplish-blue);
+    margin-bottom: 10px;
+}
+.formfield{
+    margin-top: 30px;
+}
+.mobile{
+    display: none;
+}
+label{
+    color: var(--Marine-blue);
+    font-weight: 900;
+}
+input{
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+}
+input[type='email']{
+    border: 1px solid var(--Light-gray);
+}
+input[type ='submit']{
+    background-color: var(--Marine-blue);
+    color: var(--White);
+    outline: 0;
+    border: 0;
+}
+@media(max-width: 992px){
+    .container{
+        background: none;
+        display: block;
+        margin: 0;
+        width: 100%;
+
+    }
+    .form{
+        flex-direction: column-reverse;
+        margin: 0 !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .leftcontent{
+        width: 100%;
+        padding: 1rem;
+    }
+    .rightcontent{
+        width: 100%;
+        padding: 0;
+    }
+    .image{
+        width: 100%;
+    }
+    .mobile{
+        display: flex;
+        width: 100%;
+    }
+    .desktop{
+        display: none;
+    }
+}
